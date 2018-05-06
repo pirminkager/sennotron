@@ -1,0 +1,11 @@
+Read out adc is working
+Data collection and saving (data.py) is working
+
+Todo:
+main.py + controls
+mpc.py
+model.py
+error estimation?
+alert.py?
+
+display.py
