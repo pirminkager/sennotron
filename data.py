@@ -1,7 +1,7 @@
 #!/usr/bin/py
 import time
-#import mpc3208
-import fakeadc as adc
+import mpc3208 as adc
+#import fakeadc as adc
 import os
 ## Variable Definitions
 sampletime = 0.5
