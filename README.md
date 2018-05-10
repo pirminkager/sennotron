@@ -1,5 +1,8 @@
 # sennotron
 
+Read out adc is working
+Data collection and saving (data.py) is working
+
 ## Installation
 
 It is important to always have a stable and predictive environment. Packages installed on the system
@@ -16,4 +19,14 @@ on different systems.
 
     # install project dependencies
     pip install -r requirements.txt
+
+## Todo
+
+### main.py + controls
+### mpc.py
+### model.py
+### error estimation?
+### alert.py?
+### display.py
+
 
