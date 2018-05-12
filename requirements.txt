@@ -1,2 +1,2 @@
 spidev==3.2
-Adafruit_Python_CharLCD
+RPi.GPIO
