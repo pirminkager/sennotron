@@ -1,26 +1,18 @@
-import pid
-#import display.py as *
-#import ad
-
-
+from modules import *
 
 if __name__ == "__main__":
+  state = 0
   while True:
     if state == 0:
-
+      print state
     elif state == 1:
-      #step
-
-      if nextstep:
-	state = state + 1
-	nextstep = 0 
+      print state
     elif state == 2:
-
+      print state
     elif state == 3:
-
+      print state
     elif state == 4:
-
+      print state
     else:
       state = 0
 
-    if skip

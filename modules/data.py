@@ -4,8 +4,7 @@ import numpy as np
 from datetime import datetime
 import mpc3208 as adc
 #import fakeadc as adc
-import os
-import writemodule as write
+
 ## Variable Definitions
 sampletime = 1
 numsensors = 8 #int from 1 to 8
@@ -60,6 +59,8 @@ class sampler(object):
 
 ## Test Section ##
 if __name__ == "__main__":
+  import write
+  import os
 
   data = sampler()
   timestamp = time.time()

@@ -1,0 +1,7 @@
+#Name;		Temp;	Rampe[0,1];	Heizgeschwindigkeit;	Zeit;	Manual;
+schritt1;	20.5;	0;		0;			10;	0;
+#schritt2;	30;	1;		3;			20;	0;
+Vorheizen;      12;	0;		;			0;	0;
+Kulturenzugabe;	24;	0;		;			;	0;
+Vorreifen;	25;	;		;			;	;
+#	;	;	;		;			;	;

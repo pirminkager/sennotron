@@ -58,14 +58,48 @@ lcd.message = types.MethodType(_message_new, lcd)
 #
 
 def writestep(input):
-  lcd.set_cursor(0,0)
-  lcd.message(str('{:'+str(lcd_columns+1)+'}').format(input))
+  try:
+    if len(input) > 40:
+      raise ValueError('Input is longer than 40')
+    elif input.__class__ != str:
+      raise TypeError('Input is not a string')
+    else:
+      lcd.set_cursor(0,0)
+      lcd.message(str('{:'+str(lcd_columns+1)+'}').format(input))
+  except ValueError:
+    lcd.set_cursor(0,0)
+    lcd.message(str('{:'+str(lcd_columns+1)+'}').format('ERROR'))
+    #raise ValueError('Input is longer than 40')
+  except TypeError:
+    lcd.set_cursor(0,0)
+    lcd.message(str('{:'+str(lcd_columns+1)+'}').format('ERROR'))
+    #raise TypeError('Input is not a string')
+  except:
+    lcd.set_cursor(0,0)
+    lcd.message(str('{:'+str(lcd_columns+1)+'}').format('ERROR'))
 
 def writetemp(input):
-  lcd.set_cursor(0,1)
-  lcd.message(str('{:04.1f}').format(input)+'°C ')
+  try:
+    if input > 99.9:
+      raise ValueError
+    elif input < 0:
+      raise ValueError
+    else:
+      lcd.set_cursor(0,1)
+      lcd.message(str('{:04.1f}').format(input)+'°C ')
+  except:
+    lcd.set_cursor(0,1)
+    lcd.message('ERROR  ')
 
 def writetime(input):
-  lcd.set_cursor(8,1)
-  #lcd.message(str(datetime.timedelta(seconds=int(input)))+'   ') #not so nice
-  lcd.message(time.strftime("%H:%M:%S", time.gmtime(int(input)))) #better formatting
+  try:
+    if int(input) >= 3600:
+      lcd.set_cursor(8,1)
+      #lcd.message(str(datetime.timedelta(seconds=int(input)))+'   ') #not so nice
+      lcd.message(time.strftime("%H:%M:%S", time.gmtime(int(input)))) #better formatting
+    else:
+      lcd.set_cursor(8,1)
+      lcd.message(time.strftime("   %M:%S", time.gmtime(int(input))))
+  except:
+    lcd.set_cursor(8,1)
+    lcd.message('    ERROR')

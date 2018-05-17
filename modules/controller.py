@@ -1,8 +1,5 @@
 #!/usr/bin/py
 
-def calcmodel:
-  
-
 
 
 
