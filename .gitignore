@@ -3,3 +3,5 @@
 
 # virtual environment
 .venv3
+modules/output.dat
+modules/test.png
