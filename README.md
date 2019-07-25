@@ -1,4 +1,6 @@
-# sennotron
+# sennotron-beeromat
+
+Sennotron is also a great beer brewer!
 
 Read out adc is working
 Data collection and saving (data.py) is working
